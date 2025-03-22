@@ -1,11 +1,8 @@
-package backend;
-
-import com.google.gson.Gson;
+package legacy;
 
 import java.time.LocalDate;
-import java.util.Date;
 
-public class Event {
+public class OldEvent {
     private int id;
     private String name;
     private String summary;
@@ -16,7 +13,7 @@ public class Event {
     private String firstDefinition;
     private String photosLink;
 
-    public Event(int id, String name, String summary, LocalDate date, double duration) {
+    public OldEvent(int id, String name, String summary, LocalDate date, double duration) {
         this.id = id;
         this.name = name;
         this.summary = summary;

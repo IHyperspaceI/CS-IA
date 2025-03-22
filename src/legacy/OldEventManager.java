@@ -1,12 +1,12 @@
-package backend;
+package legacy;
 
 import java.util.ArrayList;
 
-public class EventManager {
-    private ArrayList<Event> events;
-    private SaveFileManager fileManager;
+public class OldEventManager {
+    private ArrayList<OldEvent> events;
+    private OldSaveFileManager fileManager;
 
-    public EventManager(SaveFileManager fileManager) {
+    public OldEventManager(OldSaveFileManager fileManager) {
         this.fileManager = fileManager;
 
         events = new ArrayList<>();
@@ -18,16 +18,16 @@ public class EventManager {
     }
 
     public void saveEvents() {
-        for (Event event : events) {
+        for (OldEvent event : events) {
             fileManager.saveEvent(event);
         }
     }
 
-    public void addEvent(Event event) {
+    public void addEvent(OldEvent event) {
         events.add(event);
     }
 
-    public ArrayList<Event> getEvents() {
+    public ArrayList<OldEvent> getEvents() {
         return events;
     }
 }

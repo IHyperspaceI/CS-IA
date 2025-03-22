@@ -1,6 +1,4 @@
-package gui;
-import backend.*;
-import backend.Event;
+package legacy;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,8 +12,8 @@ public class MainMenu extends JPanel{
     private JFrame frame;
     public MainMenu(JFrame frame) {
         this.frame = frame;
-        SaveFileManager fileManager = new SaveFileManager("saved.json");
-        EventManager manager = new EventManager(fileManager);
+        OldSaveFileManager fileManager = new OldSaveFileManager("saved.json");
+        OldEventManager manager = new OldEventManager(fileManager);
 
         setBackground(Color.DARK_GRAY);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -36,7 +34,7 @@ public class MainMenu extends JPanel{
         eventsListContainer.setHorizontalScrollBarPolicy(HORIZONTAL_SCROLLBAR_NEVER);
         add(eventsListContainer);
 
-        for (Event event : manager.getEvents()) {
+        for (OldEvent event : manager.getEvents()) {
             addEventLabel(eventsListPanel, event);
         }
 
@@ -44,7 +42,7 @@ public class MainMenu extends JPanel{
         newEventButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Event templateEvent = new Event(manager.getEvents().size(), "New Event " + manager.getEvents().size(), "Testing...", LocalDate.now(), 0);
+                OldEvent templateEvent = new OldEvent(manager.getEvents().size(), "New Event " + manager.getEvents().size(), "Testing...", LocalDate.now(), 0);
                 manager.addEvent(templateEvent);
                 manager.saveEvents();
                 addEventLabel(eventsListPanel, templateEvent);
@@ -56,7 +54,7 @@ public class MainMenu extends JPanel{
         revalidate();
     }
 
-    public void addEventLabel(JPanel panel, Event event) {
+    public void addEventLabel(JPanel panel, OldEvent event) {
         JPanel labelPanel = new JPanel();
         labelPanel.setLayout(new BoxLayout(labelPanel, BoxLayout.X_AXIS));
         labelPanel.setBackground(Color.DARK_GRAY);

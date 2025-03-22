@@ -1,24 +1,20 @@
-package backend;
+package legacy;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.*;
 
-public class SaveFileManager {
+public class OldSaveFileManager {
     private String fileName;
     private Gson gson;
     private int numEvents;
 
-    public SaveFileManager(String fileName) {
+    public OldSaveFileManager(String fileName) {
         this.fileName = fileName;
         gson = new Gson();
         numEvents = loadEvents().size();
@@ -28,7 +24,7 @@ public class SaveFileManager {
         return numEvents;
     }
 
-    public void saveEvent(Event event) {
+    public void saveEvent(OldEvent event) {
         JsonArray eventsJson = loadEvents();
         boolean eventUpdated = false;
 
@@ -58,7 +54,7 @@ public class SaveFileManager {
         }
     }
 
-    private JsonObject createEventJson(Event event) {
+    private JsonObject createEventJson(OldEvent event) {
         JsonObject eventJson = new JsonObject();
         eventJson.addProperty("name", event.getName());
         eventJson.addProperty("summary", event.getSummary());
@@ -73,8 +69,8 @@ public class SaveFileManager {
         return eventJson;
     }
 
-    public ArrayList<Event> getEvents() {
-        ArrayList<Event> eventList = new ArrayList<>();
+    public ArrayList<OldEvent> getEvents() {
+        ArrayList<OldEvent> eventList = new ArrayList<>();
         JsonArray eventsJson = loadEvents();
 
         for (int i = 0; i < eventsJson.size(); i++) {
@@ -86,7 +82,7 @@ public class SaveFileManager {
             int month = eventJson.get("date_month").getAsInt();
             int year = eventJson.get("date_year").getAsInt();
 
-            Event event = new Event(eventId, eventJson.get("name").getAsString(), eventJson.get("summary").getAsString(), LocalDate.of(year, month, day), eventJson.get("duration").getAsInt());
+            OldEvent event = new OldEvent(eventId, eventJson.get("name").getAsString(), eventJson.get("summary").getAsString(), LocalDate.of(year, month, day), eventJson.get("duration").getAsInt());
             event.setPeopleReached(eventJson.get("people_reached").getAsInt());
             event.setDifficulty(eventJson.get("difficulty").getAsInt());
             event.setFirstDefinition(eventJson.get("first_definition").getAsString());

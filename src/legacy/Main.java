@@ -1,16 +1,12 @@
-package gui;
-
-import backend.Event;
-import backend.EventManager;
-import backend.SaveFileManager;
+package legacy;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        SaveFileManager fileManager = new SaveFileManager("saved.json");
-        EventManager manager = new EventManager(fileManager);
+        OldSaveFileManager fileManager = new OldSaveFileManager("saved.json");
+        OldEventManager manager = new OldEventManager(fileManager);
         manager.loadEvents();
 
         JFrame frame = new JFrame("Events");
