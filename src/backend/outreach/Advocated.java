@@ -29,6 +29,22 @@ public class Advocated extends Outreach implements Serializable {
         this.outcome = outcome;
     }
 
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getOutcome() {
+        return outcome;
+    }
+
+    public void setOutcome(String outcome) {
+        this.outcome = outcome;
+    }
+
     /**
      * Gives a string of the outreach details
      * @return all the details listed as a string with new lines

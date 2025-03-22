@@ -57,6 +57,11 @@ public class EditMenu extends JPanel {
         JTextArea durationArea = null;
         JTextArea difficultyArea = null;
         JTextArea participatingTeamsArea = null;
+        JTextArea hostTeamArea = null;
+        JTextArea recipientArea = null;
+        JTextArea topicArea = null;
+        JTextArea outcomeArea = null;
+        JTextArea linkArea = null;
 
         if (outreach instanceof Event) {
             Event o = (Event) outreach;
@@ -71,7 +76,6 @@ public class EditMenu extends JPanel {
             add(new JLabel("# Participating Teams:"));
             add(participatingTeamsArea);
         }
-        JTextArea hostTeamArea = null;
         if (outreach instanceof SupportedEvent) {
             SupportedEvent o = (SupportedEvent) outreach;
             hostTeamArea = new JTextArea(o.getHostTeam(), 1, 20);
@@ -79,7 +83,6 @@ public class EditMenu extends JPanel {
             add(new JLabel("Host Team:"));
             add(hostTeamArea);
         }
-        JTextArea recipientArea = null;
         if (outreach instanceof MentoredTeam) {
             MentoredTeam o = (MentoredTeam) outreach;
             recipientArea = new JTextArea(o.getRecipient(), 1, 20);
@@ -95,6 +98,30 @@ public class EditMenu extends JPanel {
             recipientArea = new JTextArea(o.getRecipient(), 1, 20);
 
             add(new JLabel("Recipient Team:"));
+            add(recipientArea);
+        }
+        if (outreach instanceof Advocated) {
+            Advocated o = (Advocated) outreach;
+            topicArea = new JTextArea(o.getTopic(), 1, 20);
+            outcomeArea = new JTextArea(o.getOutcome(), 1, 20);
+
+            add(new JLabel("Topic:"));
+            add(topicArea);
+            add(new JLabel("Outcome:"));
+            add(outcomeArea);
+        }
+        if (outreach instanceof PublishedResources) {
+            PublishedResources o = (PublishedResources) outreach;
+            linkArea = new JTextArea(o.getLinkToResource(), 1, 20);
+
+            add(new JLabel("Link to Resource:"));
+            add(linkArea);
+        }
+        if (outreach instanceof StartedTeam) {
+            StartedTeam o = (StartedTeam) outreach;
+            recipientArea = new JTextArea(o.getTeamStarted(), 1, 20);
+
+            add(new JLabel("Team Name:"));
             add(recipientArea);
         }
 
@@ -114,6 +141,9 @@ public class EditMenu extends JPanel {
         JTextArea finalDifficultyArea = difficultyArea;
         JTextArea finalHostTeamArea = hostTeamArea;
         JTextArea finalRecipientArea = recipientArea;
+        JTextArea finalOutcomeArea = outcomeArea;
+        JTextArea finalTopicArea = topicArea;
+        JTextArea finalLinkArea = linkArea;
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -137,6 +167,16 @@ public class EditMenu extends JPanel {
                 }
                 if (outreach instanceof AssistedTeam) {
                     ((AssistedTeam) outreach).setRecipient(finalRecipientArea.getText());
+                }
+                if (outreach instanceof Advocated) {
+                    ((Advocated) outreach).setTopic(finalTopicArea.getText());
+                    ((Advocated) outreach).setOutcome(finalOutcomeArea.getText());
+                }
+                if (outreach instanceof PublishedResources) {
+                    ((PublishedResources) outreach).setLinkToResource(finalLinkArea.getText());
+                }
+                if (outreach instanceof StartedTeam) {
+                    ((StartedTeam) outreach).setTeamStarted(finalRecipientArea.getText());
                 }
 
                     setVisible(false);
