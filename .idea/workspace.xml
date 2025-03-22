@@ -5,35 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a43bacf-bca8-4fc7-b379-eabc7a64606a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/documentation/EventTypes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/outreach_data.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/OutreachManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/filemanagement/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/Advocated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/AssistedTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/HostedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/MentoredTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/Outreach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/PublishedResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/RanEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/StartedTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/outreach/SupportedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/legacy/OldEventApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/EditMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/NewEventMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/UIMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS IA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS IA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/legacy/OldEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/EventApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/legacy/OldEventManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/SaveFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/legacy/OldSaveFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/EditMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/legacy/EditMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/legacy/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/legacy/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/UML.png" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/UML.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outreach_data.ser" beforeDir="false" afterPath="$PROJECT_DIR$/outreach_data.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/EditMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/EditMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +67,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documentation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/documentation" />
     </key>
   </component>

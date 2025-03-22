@@ -20,7 +20,7 @@ import java.time.LocalDate;
  */
 public class EditMenu extends JPanel {
     public EditMenu(JFrame frame, MainMenu mainMenu, OutreachManager manager, Outreach outreach) {
-        setSize(600, 400);
+        setSize(600, 600);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         JTextArea titleArea = new JTextArea(outreach.getTitle(), 1, 20);
